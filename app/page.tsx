@@ -37,7 +37,7 @@ export default function Home() {
 
         {/* Professional Summary */}
         <AnimatedItem>
-          <About summary={data.professional_summary} />
+          <About summary={data.professional_summary} keywords={data.keywords ?? []} />
         </AnimatedItem>
 
         {/* Education */}
@@ -47,12 +47,12 @@ export default function Home() {
 
         {/* Experience */}
         <AnimatedItem>
-          <ExperienceSection experience={data.professional_experience} />
+          <ExperienceSection experience={data.professional_experience} keywords={data.keywords ?? []} />
         </AnimatedItem>
 
         {/* Projects */}
         <AnimatedItem>
-          <Projects projects={data.technical_projects} />
+          <Projects projects={data.technical_projects} keywords={data.keywords ?? []} />
         </AnimatedItem>
 
         {/* Skills */}
@@ -62,12 +62,12 @@ export default function Home() {
 
         {/* Achievements */}
         <AnimatedItem>
-          <Achievements achievements={data.key_achievements} />
+          <Achievements achievements={data.key_achievements} keywords={data.keywords ?? []} />
         </AnimatedItem>
 
         {/* Current Learnings */}
         <AnimatedItem>
-          <CurrentLearnings learnings={data.current_learnings} />
+          <CurrentLearnings learnings={data.current_learnings} keywords={data.keywords ?? []} />
         </AnimatedItem>
 
         {/* Footer */}

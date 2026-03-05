@@ -1,11 +1,13 @@
 import { Experience } from '@/types/portfolio'
+import { highlight } from '@/lib/highlight'
 import { AnimatedItem } from './AnimatedSection'
 
 interface ExperienceProps {
   experience: Experience[]
+  keywords: string[]
 }
 
-export default function ExperienceSection({ experience }: ExperienceProps) {
+export default function ExperienceSection({ experience, keywords }: ExperienceProps) {
   return (
     <section aria-label="Professional Experience" className="mb-16">
       <AnimatedItem>
@@ -37,7 +39,7 @@ export default function ExperienceSection({ experience }: ExperienceProps) {
                 {exp.contributions.map((point, i) => (
                   <li key={i} className="flex gap-3 text-body">
                     <span className="text-neutral-700 mt-1.5 shrink-0">&mdash;</span>
-                    <span>{point}</span>
+                    <span>{highlight(point, keywords)}</span>
                   </li>
                 ))}
               </ul>

@@ -1,10 +1,12 @@
+import { highlight } from '@/lib/highlight'
 import { AnimatedItem } from './AnimatedSection'
 
 interface AboutProps {
   summary: string
+  keywords: string[]
 }
 
-export default function About({ summary }: AboutProps) {
+export default function About({ summary, keywords }: AboutProps) {
   return (
     <section aria-label="Professional Summary" className="mb-16">
       <AnimatedItem>
@@ -13,7 +15,7 @@ export default function About({ summary }: AboutProps) {
         </h2>
       </AnimatedItem>
       <AnimatedItem>
-        <p className="text-body">{summary}</p>
+        <p className="text-body">{highlight(summary, keywords)}</p>
       </AnimatedItem>
     </section>
   )

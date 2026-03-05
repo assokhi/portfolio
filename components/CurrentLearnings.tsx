@@ -1,10 +1,12 @@
+import { highlight } from '@/lib/highlight'
 import { AnimatedItem } from './AnimatedSection'
 
 interface CurrentLearningsProps {
   learnings: string[]
+  keywords: string[]
 }
 
-export default function CurrentLearnings({ learnings }: CurrentLearningsProps) {
+export default function CurrentLearnings({ learnings, keywords }: CurrentLearningsProps) {
   return (
     <section aria-label="Current Learnings" className="mb-16">
       <AnimatedItem>
@@ -22,7 +24,7 @@ export default function CurrentLearnings({ learnings }: CurrentLearningsProps) {
           <AnimatedItem key={index}>
             <li className="flex gap-3 text-body">
               <span className="text-neutral-700 mt-1.5 shrink-0">&rarr;</span>
-              <span>{item}</span>
+              <span>{highlight(item, keywords)}</span>
             </li>
           </AnimatedItem>
         ))}

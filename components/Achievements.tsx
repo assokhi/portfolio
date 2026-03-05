@@ -1,10 +1,12 @@
+import { highlight } from '@/lib/highlight'
 import { AnimatedItem } from './AnimatedSection'
 
 interface AchievementsProps {
   achievements: string[]
+  keywords: string[]
 }
 
-export default function Achievements({ achievements }: AchievementsProps) {
+export default function Achievements({ achievements, keywords }: AchievementsProps) {
   return (
     <section aria-label="Key Achievements" className="mb-16">
       <AnimatedItem>
@@ -21,7 +23,7 @@ export default function Achievements({ achievements }: AchievementsProps) {
               <span className="font-mono text-xs text-neutral-700 pt-1.5 w-5 shrink-0 tabular-nums">
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <p className="text-body">{item}</p>
+              <p className="text-body">{highlight(item, keywords)}</p>
             </li>
           </AnimatedItem>
         ))}

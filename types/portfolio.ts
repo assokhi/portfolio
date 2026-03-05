@@ -50,4 +50,5 @@ export interface PortfolioData {
   technical_skills: TechnicalSkills
   key_achievements: string[]
   current_learnings: string[]
+  keywords?: string[]
 }

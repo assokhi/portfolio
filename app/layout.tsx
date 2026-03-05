@@ -18,10 +18,11 @@ const jetbrainsMono = JetBrains_Mono({
 // ─── Static Metadata ──────────────────────────────────────────
 // Update name, description, and URL to match your details.
 export const metadata: Metadata = {
-  title: 'Your Name — Software Engineer',
+  title: 'Arvinder Singh Sokhi — Software Engineer',
   description:
-    'Software engineer specializing in backend architecture, distributed systems, and applied AI. Apache Maven contributor. Minimalist portfolio built with Next.js.',
+    'Software engineer specializing in backend architecture, distributed systems, and applied AI. Apache Maven contributor at the Apache Software Foundation. Minimalist portfolio built with Next.js.',
   keywords: [
+    'Arvinder Singh Sokhi',
     'software engineer',
     'backend developer',
     'distributed systems',
@@ -30,10 +31,11 @@ export const metadata: Metadata = {
     'Next.js portfolio',
     'AI agent',
     'LangGraph',
+    'Punjab Engineering College',
   ],
-  authors: [{ name: 'Your Name' }],
+  authors: [{ name: 'Arvinder Singh Sokhi' }],
   openGraph: {
-    title: 'Your Name — Software Engineer',
+    title: 'Arvinder Singh Sokhi — Software Engineer',
     description:
       'Backend, distributed systems, and AI. Open-source contributor to Apache Maven.',
     type: 'profile',
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'Your Name — Software Engineer',
+    title: 'Arvinder Singh Sokhi — Software Engineer',
     description:
       'Backend, distributed systems, and AI. Open-source contributor to Apache Maven.',
   },
@@ -55,9 +57,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Your Name',
-  url: 'https://yourusername.github.io/portfolio',
-  email: 'your.email@example.com',
+  name: 'Arvinder Singh Sokhi',
+  url: 'https://assokhi.github.io/portfolio',
+  email: 'singhsokhiarvinder@gmail.com',
   jobTitle: 'Software Engineer',
   alumniOf: {
     '@type': 'CollegeOrUniversity',
@@ -78,8 +80,9 @@ const jsonLd = {
     'Artificial Intelligence',
   ],
   sameAs: [
-    'https://github.com/yourusername',
-    'https://linkedin.com/in/yourusername',
+    'https://github.com/assokhi',
+    'https://www.linkedin.com/in/assokhi/',
+    'https://leetcode.com/u/Arvinder_Singh_Sokhi/',
   ],
 }
 

@@ -2,13 +2,15 @@
 
 import { motion } from 'framer-motion'
 import { Project } from '@/types/portfolio'
+import { highlight } from '@/lib/highlight'
 import { AnimatedItem } from './AnimatedSection'
 
 interface ProjectsProps {
   projects: Project[]
+  keywords: string[]
 }
 
-export default function Projects({ projects }: ProjectsProps) {
+export default function Projects({ projects, keywords }: ProjectsProps) {
   return (
     <section aria-label="Technical Projects" className="mb-16">
       <AnimatedItem>
@@ -52,7 +54,7 @@ export default function Projects({ projects }: ProjectsProps) {
                 {project.description.map((point, i) => (
                   <li key={i} className="flex gap-3 text-body">
                     <span className="text-neutral-700 mt-1.5 shrink-0">&mdash;</span>
-                    <span>{point}</span>
+                    <span>{highlight(point, keywords)}</span>
                   </li>
                 ))}
               </ul>
