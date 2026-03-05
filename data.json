@@ -1,0 +1,91 @@
+{
+  "personal_information": {
+    "name": "Your Name",
+    "email": "your.email@example.com",
+    "location": "Punjab, India",
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername",
+    "leetcode": "https://leetcode.com/yourusername"
+  },
+  "professional_summary": "A rigorous software engineer specializing in backend architecture, distributed systems, and the applied engineering of artificial intelligence. Currently pursuing a dual-disciplinary education with a Bachelor of Technology in Electrical Engineering augmented by a Minor in Computer Science Engineering, inherently bridging the complex gap between low-level hardware system design and high-level software application logic. The professional trajectory encompasses a wide spectrum of engineering disciplines — from authoring core open-source contributions at the Apache Software Foundation to architecting highly concurrent, transaction-safe booking systems and intelligent, autonomous AI agents. The underlying engineering philosophy is driven by an unrelenting pursuit of writing immaculate, infinitely scalable, and highly optimized code, ensuring robust performance across diverse computational environments.",
+  "academic_education": [
+    {
+      "institution": "Punjab Engineering College",
+      "location": "Chandigarh, India",
+      "degree": "Bachelor of Technology",
+      "major": "Electrical Engineering",
+      "minor": "Computer Science Engineering",
+      "start_date": "Aug 2023",
+      "end_date": "May 2027",
+      "cgpa": "8.08"
+    }
+  ],
+  "professional_experience": [
+    {
+      "organization": "Apache Software Foundation",
+      "role": "Open Source Contributor",
+      "type": "Open Source",
+      "start_date": "2024",
+      "end_date": "Present",
+      "contributions": [
+        "Contributed a CLI enhancement to Apache Maven 4.0.0 — one of the most widely used build automation tools in the Java ecosystem.",
+        "Implemented a complete time zone configuration feature for the command-line interface, enabling granular locale awareness in build pipelines.",
+        "Rigorously tested the contribution against Apache release standards; patch was officially accepted and scheduled for deployment in the Maven 4.0.0 stable branch.",
+        "Navigated the Apache Foundation's formal code review, patch submission, and JIRA issue tracking workflows end-to-end."
+      ]
+    }
+  ],
+  "technical_projects": [
+    {
+      "title": "Train Ticket Booking System",
+      "status": "Active Development",
+      "stack": ["Spring Boot", "LangGraph", "React.js", "JPA", "PostgreSQL", "Large Language Models", "RESTful APIs"],
+      "description": [
+        "Architected a highly concurrent-safe ticketing backend explicitly designed to gracefully handle race conditions endemic to high-traffic booking environments.",
+        "Implemented JPA pessimistic locking and strict transaction management protocols to mathematically prevent data anomalies such as double-booking under simultaneous load.",
+        "Integrated LangGraph-powered LLM workflows to provide intelligent, context-aware search and recommendation capabilities within the booking flow.",
+        "Exposed all core functionalities — search, real-time seat availability matrices, and final transactional booking — via secure, performant RESTful APIs."
+      ]
+    },
+    {
+      "title": "Noona — Custom Chess Engine",
+      "status": "Completed",
+      "stack": ["Java", "Minimax Algorithm", "Alpha-Beta Pruning", "Universal Chess Interface (UCI)"],
+      "description": [
+        "Engineered a fully functional chess engine in pure Java, with core intelligence powered by the Minimax algorithm enhanced with Alpha-Beta pruning to drastically reduce the computational search tree.",
+        "Designed highly efficient internal board representations, a complete legal move generator, and sophisticated heuristic evaluation functions for dynamic, positional scoring.",
+        "Built full compliance with the Universal Chess Interface (UCI) protocol, enabling seamless integration with standard graphical chess interfaces.",
+        "Achieved significant search depth improvements over baseline Minimax through aggressive pruning, reducing evaluated nodes by over 60% in mid-game positions."
+      ]
+    },
+    {
+      "title": "Instagram Media Automation Tool",
+      "status": "Completed",
+      "stack": ["Python", "Instaloader", "Data Pipeline Engineering"],
+      "description": [
+        "Engineered an automated data-extraction pipeline using Python and the Instaloader API to reliably retrieve structured metrics and high-definition media assets from public Instagram profiles.",
+        "Designed a custom abstraction layer over Instaloader to normalize API responses into structured, queryable datasets.",
+        "Entirely bypassed the operational risks and security exposure of ad-laden, unverified third-party scraping tools by composing a clean, maintainable, first-party solution.",
+        "Implemented robust error handling and rate-limit-aware retry logic to ensure reliable execution in production-grade automation scenarios."
+      ]
+    }
+  ],
+  "technical_skills": {
+    "languages": ["Java", "Python", "TypeScript", "JavaScript", "SQL", "C++"],
+    "concepts": ["Distributed Systems", "Concurrent Programming", "RESTful API Design", "Data Structures & Algorithms", "Transaction Management", "Pessimistic Locking", "Graph-based LLM Workflows", "Static Site Generation"],
+    "frameworks": ["Spring Boot", "Next.js", "React.js", "LangGraph", "Framer Motion", "Tailwind CSS", "JPA / Hibernate"],
+    "tools": ["Apache Maven", "Git", "PostgreSQL", "Docker", "Node.js", "LeetCode", "Instaloader", "Universal Chess Interface"]
+  },
+  "key_achievements": [
+    "Apache Software Foundation Contributor — authored a CLI timezone configuration feature for Apache Maven 4.0.0, rigorously reviewed and accepted for the stable global release branch.",
+    "Adobe Hackathon 2024 — advanced to Stage 2, placing in the top 5% of over 200,000 global participants across an intensely competitive engineering cohort.",
+    "LeetCode Rating 1565 — resolved 400+ algorithmic problems spanning all core Data Structures and Algorithms domains, demonstrating consistent, high-caliber problem-solving performance.",
+    "Maintained a CGPA of 8.08 across a demanding dual-discipline curriculum combining Electrical Engineering and Computer Science Engineering at Punjab Engineering College."
+  ],
+  "current_learnings": [
+    "Agentic AI — designing and implementing autonomous agents capable of complex, multi-step reasoning and goal-directed task execution.",
+    "LangGraph — building stateful, multi-actor applications powered by Large Language Models, enabling conditional execution graphs and persistent agent memory.",
+    "Model Context Protocol (MCP) — exploring the emerging standard for structured, bidirectional LLM-tool communication, enabling deterministic context injection into inference pipelines.",
+    "Agent-to-Agent (A2A) architectures — investigating how independent intelligent agents communicate, delegate tasks, and collaborate to resolve non-deterministic, open-ended problems."
+  ]
+}

@@ -1,0 +1,6 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap (update with your actual URL after deployment)
+# Sitemap: https://yourusername.github.io/portfolio/sitemap.xml

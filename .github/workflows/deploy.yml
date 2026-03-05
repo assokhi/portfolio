@@ -1,0 +1,85 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# CI/CD — Deploy Next.js static portfolio to GitHub Pages
+#
+# Trigger: every push to the `main` branch  OR  a manual workflow dispatch.
+#
+# How it works:
+#   1. Build the Next.js app with `output: 'export'` → static files land in ./out
+#   2. Upload ./out as a Pages artifact
+#   3. Deploy the artifact to GitHub Pages
+#
+# One-time setup you must do in GitHub:
+#   Settings → Pages → Build and deployment → Source = "GitHub Actions"
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:          # Allows manual re-runs from the Actions tab
+
+# Grant the workflow the minimum permissions it needs
+permissions:
+  contents: read
+  pages: write
+  id-token: write             # Required by actions/deploy-pages
+
+# Prevent concurrent deployments; if a new push arrives, cancel the old run
+concurrency:
+  group: pages
+  cancel-in-progress: false   # Let the running deploy finish before starting a new one
+
+jobs:
+  # ── Job 1: Build ──────────────────────────────────────────────
+  build:
+    name: Build static site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm              # Cache npm dependencies between runs
+
+      - name: Install dependencies
+        run: npm ci               # Reproducible install from package-lock.json
+
+      # GitHub Pages serves project sites at: https://<user>.github.io/<repo>
+      # The basePath must match the repository name so asset paths resolve correctly.
+      # `github.event.repository.name` resolves to e.g. "portfolio" at runtime.
+      - name: Build Next.js static export
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+
+      # Configure the Pages environment (creates the .nojekyll file, etc.)
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v4
+
+      # Upload the ./out directory — the entire pre-rendered static site
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  # ── Job 2: Deploy ─────────────────────────────────────────────
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build                # Only runs when the build job succeeds
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

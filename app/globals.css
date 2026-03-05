@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Global resets ─────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080808;
+  color: #ffffff;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent text halation: slightly loosen sub-pixel rendering */
+  text-rendering: optimizeLegibility;
+}
+
+/* ─── Custom text selection ──────────────────────────────────── */
+::selection {
+  background-color: #ffffff;
+  color: #080808;
+}
+
+/* ─── Scrollbar (subtle, matches palette) ───────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+/* ─── Typography utilities ───────────────────────────────────── */
+@layer utilities {
+  .text-display {
+    @apply text-4xl font-semibold tracking-tight leading-none;
+  }
+
+  .text-section-heading {
+    @apply text-2xl font-medium tracking-tight;
+  }
+
+  .text-body {
+    @apply text-base text-neutral-300 leading-relaxed;
+  }
+
+  .text-meta {
+    @apply font-mono text-xs text-neutral-500 uppercase tracking-widest;
+  }
+
+  .tag {
+    @apply font-mono text-xs text-neutral-400 border border-neutral-800 px-2 py-0.5 rounded-sm;
+  }
+
+  .divider {
+    @apply border-b border-neutral-800;
+  }
+}
