@@ -1,11 +1,11 @@
 {
   "personal_information": {
-    "name": "Your Name",
-    "email": "your.email@example.com",
+    "name": "Arvinder Singh Sokhi",
+    "email": "singhsokhiarvinder@gmail.com",
     "location": "Punjab, India",
-    "github": "https://github.com/yourusername",
-    "linkedin": "https://linkedin.com/in/yourusername",
-    "leetcode": "https://leetcode.com/yourusername"
+    "github": "https://github.com/assokhi",
+    "linkedin": "https://www.linkedin.com/in/assokhi/",
+    "leetcode": "https://leetcode.com/u/Arvinder_Singh_Sokhi/"
   },
   "professional_summary": "A rigorous software engineer specializing in backend architecture, distributed systems, and the applied engineering of artificial intelligence. Currently pursuing a dual-disciplinary education with a Bachelor of Technology in Electrical Engineering augmented by a Minor in Computer Science Engineering, inherently bridging the complex gap between low-level hardware system design and high-level software application logic. The professional trajectory encompasses a wide spectrum of engineering disciplines — from authoring core open-source contributions at the Apache Software Foundation to architecting highly concurrent, transaction-safe booking systems and intelligent, autonomous AI agents. The underlying engineering philosophy is driven by an unrelenting pursuit of writing immaculate, infinitely scalable, and highly optimized code, ensuring robust performance across diverse computational environments.",
   "academic_education": [
@@ -87,5 +87,26 @@
     "LangGraph — building stateful, multi-actor applications powered by Large Language Models, enabling conditional execution graphs and persistent agent memory.",
     "Model Context Protocol (MCP) — exploring the emerging standard for structured, bidirectional LLM-tool communication, enabling deterministic context injection into inference pipelines.",
     "Agent-to-Agent (A2A) architectures — investigating how independent intelligent agents communicate, delegate tasks, and collaborate to resolve non-deterministic, open-ended problems."
+  ],
+  "keywords": [
+    "Apache Maven",
+    "Apache Software Foundation",
+    "LangGraph",
+    "Spring Boot",
+    "React.js",
+    "Java",
+    "Python",
+    "TypeScript",
+    "PostgreSQL",
+    "JPA",
+    "LeetCode",
+    "Minimax",
+    "Alpha-Beta pruning",
+    "RESTful APIs",
+    "Large Language Models",
+    "open-source",
+    "Adobe Hackathon",
+    "Instaloader",
+    "Universal Chess Interface"
   ]
 }
